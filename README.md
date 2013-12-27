@@ -7,11 +7,19 @@ A simple test implementation of a RESTful API for an app-store, built on Spray/A
 # Notes #
 
 Built on the Spray framework (which in turn is based on Akka)
-Spray: http://spray.io/
-Akka: http://akka.io/
+Spray 1.2.0:
 
-Evolved from the Spray provided spray-template
-https://github.com/spray/spray-template
+        http://spray.io/
+        http://spray.io/documentation/1.2.0/
+
+Akka 2.1.4:
+
+        http://akka.io/
+
+Evolved from the Spray provided spray-template and examples
+
+        https://github.com/spray/spray-template
+        https://github.com/spray/spray/tree/master/examples/spray-routing/on-spray-can
 
 
 # Getting Started #

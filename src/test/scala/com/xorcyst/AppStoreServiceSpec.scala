@@ -7,25 +7,21 @@ import StatusCodes._
 
 class AppStoreServiceSpec extends Specification with Specs2RouteTest with AppStoreService {
   def actorRefFactory = system
-  
-  "AppStoreService" should {
+
+  "The AppStoreService" should {
 
     "return a greeting for GET requests to the root path" in {
-      Get() ~> myRoute ~> check {
-        responseAs[String] must contain("Say hello")
-      }
+      Get() ~> serviceRoutes ~> check { responseAs[String] must contain("app-store API") }
     }
 
     "leave GET requests to other paths unhandled" in {
-      Get("/kermit") ~> myRoute ~> check {
-        handled must beFalse
-      }
+      Get("/w00t") ~> serviceRoutes ~> check { handled must beFalse }
     }
 
     "return a MethodNotAllowed error for PUT requests to the root path" in {
-      Put() ~> sealRoute(myRoute) ~> check {
+      Put() ~> sealRoute(serviceRoutes) ~> check {
         status === MethodNotAllowed
-        responseAs[String] === "HTTP method not allowed, supported methods: GET"
+        responseAs[String] === "HTTP method not allowed, supported methods: GET, POST"
       }
     }
   }
