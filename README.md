@@ -6,7 +6,7 @@ A simple test implementation of a RESTful API for an app-store, built on Spray/S
 
 # API Documentation #
 
-        http://elespuruappstore.apiary.io
+        http://docs.elespuruappstore.apiary.io/
 
 # Notes #
 
