@@ -79,4 +79,5 @@ Evolved from the Spray provided spray-template and examples
 
 
 ## Accessing the cloud hosted API ##
+### NOT YET DEPLOYED ###
 * http://elespuru-app-store.herokuapp.com
